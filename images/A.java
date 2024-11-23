@@ -1,0 +1,1 @@
+/home/lelapa/Pictures/Screenshots/Screenshot from 2024-10-13 14-38-20.png

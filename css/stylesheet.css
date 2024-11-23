@@ -1,0 +1,359 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Dark theme */
+    color: #ffffff;
+
+}
+
+header {
+    position: relative; /* Allows absolute positioning of the Spotify text */
+    color: #000000;
+    padding: 0px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    border-bottom: 3px solid #000000;
+    background-color: #000000; /* Added background color */
+}
+
+h1 {
+    position: absolute; /* Position the Spotify text on top of the canvas */
+    top: 0; /* Align it at the top of the visualizer */
+    width: 100%; /* Ensure it's centered */
+    color: white;
+    font-size: 4rem;
+    margin: 0;
+    padding-top: 30px; /* Adjust spacing from the top */
+}
+
+.color-picker-container {
+    position: absolute; /* Enables exact positioning */
+    top: 139px; /* 139px from the top */
+    right: 53px; /* 80px from the right */
+}
+
+/* Circle style for the color picker */
+#color-picker {
+    width: 40px; /* Width of the color picker */
+    height: 40px; /* Height of the color picker */
+    border-radius: 50%; /* Makes it circular */
+    cursor: pointer; /* Pointer cursor on hover */
+    border: 2px solid #ccc; /* Optional: border for better visibility */
+    padding: 0; /* Remove any padding */
+    appearance: none; /* Remove default styles for color input */
+    outline: none; /* Remove outline */
+}
+
+/* Optional: Customize the background of the color picker when clicked */
+#color-picker::-webkit-color-swatch {
+    border-radius: 50%; /* Circular background */
+}
+
+canvas {
+     width: 105%;
+     height: 200px;
+     background: linear-gradient(to bottom, black 50%, black 50%); /* Top half #1f1f1f, bottom half black */
+     display: block;
+     margin: 0 auto; /* Center the canvas horizontally */
+ }
+.floating-btn {
+    position: fixed; /* Keeps the button fixed on the page */
+    bottom: 20px;    /* Position from bottom */
+    right: 20px;     /* Position from right */
+    background-color: black;  /* Black background */
+    color: white;    /* White icon or text */
+    width: 60px;     /* Width of the button */
+    height: 60px;    /* Height of the button */
+    border-radius: 50%;  /* Makes it circular */
+    text-align: center;  /* Centers text/icon inside */
+    line-height: 60px;   /* Vertically centers the icon */
+    font-size: 24px;     /* Size of the icon/text */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Adds a shadow for effect */
+    cursor: pointer;  /* Changes the cursor to a pointer */
+    z-index: 1000;    /* Ensures the button is above other content */
+    text-decoration: none; /* Removes underline from links */
+    transition: background-color 0.3s, transform 0.3s; /* Adds smooth hover effect */
+}
+
+/* Hover effect */
+.floating-btn:hover {
+    background-color: #333;  /* Slightly lighter black */
+    transform: scale(1.1);   /* Slight enlargement on hover */
+}
+
+/* Icon styles */
+.fab-icon {
+    font-size: 26px;  /* Icon size */
+    font-weight: bold;  /* Makes the text/icon bold */
+}
+
+/* styles.css */
+
+/* Container to hold the profile picture */
+.profile-container {
+    position: absolute; /* Enables exact positioning */
+    top: 139px;       /* Distance from the top */
+    right: 100px;     /* Distance from the right */
+}
+
+/* Style for the profile picture */
+.profile-pic {
+    width: 40px;     /* Adjust size to your preference */
+    height: px;
+    border-radius: 50%;  /* Makes the picture circular */
+    border: 2px solid #fff;  /* Optional white border */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);  /* Adds a shadow */
+    cursor: pointer;  /* Pointer cursor to show it's interactive */
+    transition: transform 0.3s;  /* Smooth hover effect */
+}
+
+/* Hover effect for the profile picture */
+.profile-pic:hover {
+    transform: scale(1.1);
+
+     /* Slightly enlarges on hover */
+}.profilee-container {
+    position: absolute; /* Enables exact positioning */
+    top: 139px;       /* Distance from the top */
+    right: 150px;     /* Distance from the right */
+}
+
+/* Style for the profile picture */
+.profilee-pic {
+    width: 40px;     /* Adjust size to your preference */
+    height: 40px;
+    border-radius: 50%;  /* Makes the picture circular */
+    border: 2px solid #fff;  /* Optional white border */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);  /* Adds a shadow */
+    cursor: pointer;  /* Pointer cursor to show it's interactive */
+    transition: transform 0.3s;  /* Smooth hover effect */
+}
+
+/* Hover effect for the profile picture */
+.profilee-pic:hover {
+    transform: scale(1.1);  /* Slightly enlarges on hover */
+}.profileee-container {
+    position: absolute; /* Enables exact positioning */
+    top: 139px;       /* Distance from the top */
+    right: 200px;     /* Distance from the right */
+}
+
+/* Style for the profile picture */
+.profileee-pic {
+    width: 40px;     /* Adjust size to your preference */
+    height: 40px;
+    border-radius: 50%;  /* Makes the picture circular */
+    border: 2px solid #fff;  /* Optional white border */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);  /* Adds a shadow */
+    cursor: pointer;  /* Pointer cursor to show it's interactive */
+    transition: transform 0.3s;  /* Smooth hover effect */
+}
+
+/* Hover effect for the profile picture */
+.profileee-pic:hover {
+    transform: scale(1.1);  /* Slightly enlarges on hover */
+}
+.profileeee-container {
+    position: absolute; /* Enables exact positioning */
+    top: 139px;       /* Distance from the top */
+    right: 300px;     /* Distance from the right */
+}
+
+/* Style for the profile picture */
+.profileeee-pic {
+    width: 40px;     /* Adjust size to your preference */
+    height: 40px;
+    border-radius: 50%;  /* Makes the picture circular */
+    border: 2px solid #fff;  /* Optional white border */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);  /* Adds a shadow */
+    cursor: pointer;  /* Pointer cursor to show it's interactive */
+    transition: transform 0.3s;  /* Smooth hover effect */
+}
+
+/* Hover effect for the profile picture */
+.profileeee-pic:hover {
+    transform: scale(1.1);  /* Slightly enlarges on hover */
+}
+.profile1-container {
+    position: absolute; /* Enables exact positioning */
+    top: 139px;       /* Distance from the top */
+    right: 250px;     /* Distance from the right */
+}
+
+/* Style for the profile picture */
+.profile1-pic {
+    width: 40px;     /* Adjust size to your preference */
+    height: 40px;
+    border-radius: 50%;  /* Makes the picture circular */
+    border: 2px solid #fff;  /* Optional white border */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);  /* Adds a shadow */
+    cursor: pointer;  /* Pointer cursor to show it's interactive */
+    transition: transform 0.3s;  /* Smooth hover effect */
+}
+
+/* Hover effect for the profile picture */
+.profile1-pic:hover {
+    transform: scale(1.1);  /* Slightly enlarges on hover */
+}.profile2-container {
+    position: absolute; /* Enables exact positioning */
+    top: 139px;       /* Distance from the top */
+    right: 350px;     /* Distance from the right */
+}
+
+/* Style for the profile picture */
+.profile2-pic {
+    width: 40px;     /* Adjust size to your preference */
+    height: 40px;
+    border-radius: 50%;  /* Makes the picture circular */
+    border: 2px solid #fff;  /* Optional white border */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);  /* Adds a shadow */
+    cursor: pointer;  /* Pointer cursor to show it's interactive */
+    transition: transform 0.3s;  /* Smooth hover effect */
+}
+
+/* Hover effect for the profile picture */
+.profile2-pic:hover {
+    transform: scale(1.1);  /* Slightly enlarges on hover */
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.header p {
+    font-size: 45px;
+    color: #E0E0E0; /* Light text color */
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row; /* Ensure items are aligned horizontally */
+    gap: 25px; /* Space between cards */
+}
+
+.card {
+    background-color: #1F1F1F; /* Dark card background */
+    color: #E0E0E0; /* Light text */
+    padding: 40px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+.card:hover {
+    background-color: #333333; /* Change background on hover */
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+}
+
+.footer input {
+    background: linear-gradient(to right, rgba(128, 0, 128, 0.6), rgba(255, 105, 180, 0.6), rgba(70, 130, 180, 0.6)); /* Light gradient with smooth fade */
+    color: #FFFFFF; /* Text color to stand out on the gradient */
+    width: 200%;
+    padding: 20px;
+    border-radius: 30px;
+    border: 2px solid #333; /* Darker border */
+    outline: none; /* Remove default outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    font-size: 16px; /* Adjust font size */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: soft shadow for depth */
+}
+
+/* Hover effect */
+.footer input:hover {
+    border-color: #FF4081; /* Pink border on hover */
+}
+
+/* Focus effect */
+.footer input:focus {
+    outline: none; /* Remove outline on focus */
+    border-color: #FF4081; /* Pink border when focused */
+}
+
+.chat-log {
+    max-height: 1000px;
+    overflow-y: auto;
+    margin-bottom: 100px;
+    padding: 19px;
+    background-color: #000000; /* Dark background for chat */
+}
+
+.chat-message {
+    margin-bottom: 2px; /* Adjust this value to increase or decrease spacing */
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px; /* Adjusted to give more space between messages */
+}
+
+/* User message styling */
+.user-message {
+    background-color: #333333;
+    color: #E0E0E0;
+    border-radius: 18px 18px 0 18px;
+    padding: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+    margin-left: auto; /* Align user message to the right */
+    margin-right: 15px;
+}
+
+/* Bot message styling */
+.bot-message {
+    background-color: #007bff;
+    color: white;
+    border-radius: 18px 18px 18px 0;
+    padding: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+    margin-left: 15px; /* Add space between bot message and edge */
+    margin-right: auto;
+}
+
+.chat-log .chat-message + .chat-message {
+    margin-top: 10px; /* Adds vertical space between messages */
+}
+
+.user-input {
+    display: flex;
+    margin-top: 20px;
+    position: sticky;
+    bottom: 0;
+    background-color: #000000; /* Dark input background */
+}
+
+.user-input input {
+    flex: 1;
+    padding: 20px;
+    border-radius: 70px;
+    border: 2px solid #333;
+    margin-right: 17px;
+    min-width: 650px; /* Set a minimum width for the input field */
+    background-color: #000000;
+    color: #E0E0E0; /* Light text color */
+}
+
+.user-input button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.user-input button:hover {
+    background-color: #0056b3;
+}

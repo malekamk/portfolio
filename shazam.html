@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mkusic</title>
+    <link rel="stylesheet" href="css/spotify.css">
+    <style>
+        #songTitle {
+          font-size: 40px;
+          font-weight: bold;
+          color: #fff;
+          margin-bottom: 10px;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+          animation: popUp 1s ease-in-out;
+          letter-spacing: 1px;
+        }
+
+        #artist {
+          font-size: 48px;
+          font-weight: bold;
+          color: #1DB954; /* Spotify green */
+          margin-bottom: 10px;
+          text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+          animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes popUp {
+          0% {
+            transform: scale(0.5);
+            opacity: 0;
+          }
+          100% {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+
+        @keyframes glow {
+          0% {
+            text-shadow: 0 0 5px #1DB954, 0 0 10px #1DB954, 0 0 15px #1DB954;
+          }
+          100% {
+            text-shadow: 0 0 10px #1DB954, 0 0 20px #1DB954, 0 0 30px #1DB954;
+          }
+        }
+
+        #recognizeBtn {
+          position: fixed;
+          top: 139px;
+          right: 250px;
+          border: none;
+          font-size: 20px;
+          cursor: pointer;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        #recognizeBtn:hover {
+          background-color: #000000;
+          transform: scale(1.05);
+        }
+
+        #recognizeBtn i {
+          margin-right: 10px;
+        }
+
+        #songInfo {
+          position: absolute;
+          top: 139px;
+          right: 400px;
+          display: none;
+          background-color: black;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 1px;
+          border-radius: 0px;
+          text-align: center;
+          margin-top: 20px;
+          width: 100%;
+        }
+
+        #coverArt {
+          width: 500px;
+          height: 500px;
+          margin-bottom: 15px;
+          margin-top: 30px; /* Adjust this value to move it lower */
+        }
+
+        #topTracks {
+          margin-top: 40px;
+          display: flex;
+          justify-content: center;
+        }
+
+        .track-card {
+          text-align: center;
+          width: 150px;
+          margin: 1px;
+        }
+
+        .track-card img {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+
+        #track-container {
+          position: absolute;
+          top: 70px;
+          right: -350px; /* Start position off the screen */
+          right: -350px;
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          grid-gap: 13px;
+          align-items: start;
+          transition: transform 0.5s ease; /* Add transition for sliding effect */
+        }
+
+        #loader {
+          display: none;
+          margin: 20px auto;
+          text-align: center;
+        }
+        .footer {
+            -2pbackground-color: black;
+              position: absolute;
+                top: 600px;
+                right: -80px;/* Sets the background color to white */
+            color: white; /* Sets the text color to black */
+            padding: 20px; /* Adds some padding inside the footer */
+            text-align: center; /* Centers the text inside the footer */
+            position: relative; /* Ensure the z-index works */
+             z-index: 9999 /* Bring the footer to the front *//* Optional: Adds a subtle top border */
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Shazam</h1>
+</header>
+
+<canvas id="visualizer"></canvas>
+
+<a href="#" class="floating-btn">
+    <i class="fab-icon">MK</i> <!-- Add an icon or text here -->
+</a>
+
+<div class="profile-container">
+    <a href="Home.html">
+        <img src="images/mk.png" alt="Profile Picture" class="profile-pic">
+    </a>
+</div>
+
+<div class="profilee-container">
+    <img src="images/schoool.jpg" alt="Profilee Picture" class="profilee-pic">
+</div>
+<div class="profileee-container">
+    <a href="resume.html">
+        <img src="images/icon3.png" alt="Profileee Picture" class="profileee-pic">
+    </a>
+</div>
+<div class="profileeee-container">
+    <a href="gemini.html">
+        <img src="images/gemini.png" alt="Profile Picture" class="profileeee-pic">
+    </a>
+</div>
+
+<div class="profile1-container" id="recognizeBtn">
+    <img src="images/sound.jpeg" alt="Profile Picture" class="profile1-pic">
+</div>
+<div class="profile2-container">
+    <a href="spotify.html">
+        <img src="images/music.jpg" alt="Profile Picture" class="profile2-pic">
+    </a>
+</div>
+
+<div class="color-picker-container">
+    <input type="color" id="color-picker" name="color-picker" value="#ff69b4">
+</div>
+
+<!--<button id="recognizeBtn">-->
+<!--    <i class="fas fa-music"></i>Music-->
+<!--</button>-->
+
+<div id="songInfo">
+    <img id="coverArt" src="" alt="Artist Cover Art">
+    <div id="songTitle">Song Title</div>
+    <div id="artist">Artist Name</div>
+
+    <div id="topTracks">
+        <div id="track-container"></div>
+    </div>
+</div>
+
+<div id="loader">
+    <p>Loading artist data...</p>
+</div>
+
+<!--<footer class="footer">-->
+<!--    &copy; 2024 Kganya Maleka. All rights reserved.-->
+<!--</footer>-->
+
+
+<script>
+    const recognizeBtn = document.getElementById('recognizeBtn');
+    const coverArtElement = document.getElementById('coverArt');
+    const songTitleElement = document.getElementById('songTitle');
+    const artistElement = document.getElementById('artist');
+    const trackContainer = document.getElementById('track-container');
+    const loader = document.getElementById('loader');
+    const songInfoDiv = document.getElementById('songInfo');
+
+    // Save to localStorage
+    function saveSongDataToLocalStorage(songTitle, artistName, coverArtUrl, topTracks) {
+        const songData = {
+            title: songTitle,
+            artist: artistName,
+            coverArtUrl: coverArtUrl,
+            topTracks: topTracks
+        };
+        localStorage.setItem('recognizedSong', JSON.stringify(songData));
+    }
+
+    // Load from localStorage
+    function loadSongDataFromLocalStorage() {
+        const savedSongData = localStorage.getItem('recognizedSong');
+        if (savedSongData) {
+            const { title, artist, coverArtUrl, topTracks } = JSON.parse(savedSongData);
+
+            // Display the song info from localStorage
+            songTitleElement.innerText = title;
+            artistElement.innerText = artist;
+            coverArtElement.src = coverArtUrl || 'https://via.placeholder.com/300';
+
+            songInfoDiv.style.display = 'block';
+
+            // Clear previous tracks
+            trackContainer.innerHTML = '';
+
+            // Display top tracks
+            topTracks.forEach(track => {
+                const trackCard = document.createElement('div');
+                trackCard.classList.add('track-card');
+
+                const img = document.createElement('img');
+                img.src = track.imageUrl || 'https://via.placeholder.com/150';
+                trackCard.appendChild(img);
+
+                const trackName = document.createElement('p');
+                trackName.innerText = track.name;
+                trackCard.appendChild(trackName);
+
+                trackContainer.appendChild(trackCard);
+            });
+        }
+    }
+
+    // Call this on page load to display saved song
+    window.addEventListener('load', loadSongDataFromLocalStorage);
+
+    async function recognizeSong(audioBlob) {
+      const apiKey = '830948ea41d799423bd67c41c7a5fa9c';  // Your Audd.io API key
+      const formData = new FormData();
+      formData.append('file', audioBlob);
+      formData.append('api_token', apiKey);
+
+      const response = await fetch('https://api.audd.io/', {
+        method: 'POST',
+        body: formData,
+      });
+      const data = await response.json();
+
+      if (data && data.result) {
+        const artistName = data.result.artist || 'Unknown Artist';
+        const songTitle = data.result.title || 'Unknown Title';
+
+        songTitleElement.innerText = songTitle;
+        artistElement.innerText = artistName;
+
+        // Fetch artist's image and top tracks using Spotify API
+        const topTracks = await fetchTopTracksAndArtistImage(artistName);
+
+        // Show the song information div
+        songInfoDiv.style.display = 'block';
+
+        // Save recognized song data to localStorage
+        saveSongDataToLocalStorage(songTitle, artistName, coverArtElement.src, topTracks);
+      } else {
+        alert('No song recognized. Please try again.');
+      }
+    }
+
+    async function fetchTopTracksAndArtistImage(artistName) {
+    loader.style.display = 'block';
+
+    const ArtistName = artistName.replace(/\s+/g, '').toLowerCase();
+
+    try {
+        const response = await fetch(`https://kganyamaleka-1-6.onrender.com/api/TopSongs/${ArtistName}`, {
+            method: 'GET'
+        });
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        const data = await response.json();
+
+        loader.style.display = 'none';
+
+        // Set artist profile image
+        coverArtElement.src = data.artistProfileImageUrl || 'https://via.placeholder.com/300';
+
+        // Clear previous tracks
+        trackContainer.innerHTML = '';
+
+        const topTracks = data.topTracks;
+
+        // Display each top track one by one
+        for (let i = 0; i < topTracks.length; i++) {
+            const track = topTracks[i];
+            const trackCard = document.createElement('div');
+            trackCard.classList.add('track-card');
+
+            const img = document.createElement('img');
+            img.src = track.imageUrl || 'https://via.placeholder.com/150';
+            trackCard.appendChild(img);
+
+            const trackName = document.createElement('p');
+            trackName.innerText = track.name;
+            trackCard.appendChild(trackName);
+
+            trackContainer.appendChild(trackCard);
+
+            // Set initial position for animation
+            trackCard.style.transform = 'translateX(-100%)'; // Start off-screen
+            trackCard.style.opacity = 0; // Initially hidden
+
+            // Delay for each track
+            setTimeout(() => {
+                trackCard.style.transition = 'transform 0.5s ease, opacity 0.5s ease'; // Set transition
+                trackCard.style.transform = 'translateX(0)'; // Move into view
+                trackCard.style.opacity = 1; // Fade in
+            }, i * 500); // Delay for each track (500ms for each track)
+        }
+
+        return topTracks;
+
+    } catch (error) {
+        loader.style.display = 'none';
+        console.error('Fetch error:', error);
+        alert('Failed to fetch artist data. Please try again.');
+    }
+}
+
+
+    recognizeBtn.addEventListener('click', async () => {
+      if (navigator.mediaDevices.getUserMedia) {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        const mediaRecorder = new MediaRecorder(stream);
+        mediaRecorder.start();
+
+        mediaRecorder.ondataavailable = (e) => {
+          recognizeSong(e.data);
+        };
+
+        setTimeout(() => {
+          mediaRecorder.stop();
+        }, 5000);
+      }
+    });
+</script>
+
+<script src="js/shazam.js"></script>
+
+</body>
+</html>

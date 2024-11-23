@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="css/home.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Portfolio</title>
+</head>
+<body>
+<header><a href="#about">
+  <img src="images/me.jpeg" alt="Your Profile Picture"></a>
+  <div>
+    <video autoplay loop muted playsinline class="header-video">
+      <source src="images/header.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <h1>KGANYA MALEKA</h1>
+    <a href="#tech-stack">
+    </a>
+    <h1>Software Engineer | Java Developer | Innovator</h1>
+<!--    <p>Test my projects right here</p>-->
+  </div>
+
+</header>
+
+<div class="profileee-container">
+  <a href="https://www.linkedin.com/in/kganya-maleka/">
+    <img src="images/lll.png" alt="Profileee Picture" class="profileee-pic">
+  </a>
+</div>
+
+<div class="profileeee-container">
+  <a href="mailto:kganyamilton@gmail.com">
+    <img src="images/email.png" alt="Profile Picture" class="profileeee-pic">
+  </a>
+</div>
+<div class="profile1-container">
+  <a href="https://github.com/malekamk">
+    <img src="images/g1.png" alt="Profile Picture" class="profile1-pic">
+  </a>
+</div>
+<div class="profile2-container"><a href="tel:+27826809683">
+  <img src="images/call.png" alt="Profile Picture" class="profile2-pic"></a>
+</div>
+
+
+
+<main>
+  <section id="projects">
+<!--    <h2>FEATURED PROJECTS</h2>-->
+    <div class="content-container">
+      <!-- Enlarged Slideshow Container -->
+      <div class="slideshow-container">
+        <div class="slide fade">
+          <a href="spotify.html"><img src="images/kelvin.png" alt="Project 1" class="slide-image">
+          </a>
+        </div>
+        <div class="slide fade"><a href="gemini.html">
+          <img src="images/geminii.png" alt="Project 2" class="slide-image"></a>
+<!--          <div class="caption">Project 2: Description of Project 2</div>-->
+        </div>
+        <div class="slide fade"><a href="spotify.html">
+          <img src="images/karol.png" alt="Project 3" class="slide-image"></a>
+<!--          <div class="caption">Project 3: Description of Project 3</div>-->
+        </div>
+
+        <div class="slide fade"><a href="spotify.html">
+          <img src="images/blxckie.png" alt="Project 3" class="slide-image"></a>
+<!--          <div class="caption">Project 3: Description of Project 3</div>-->
+        </div>
+
+        <div class="slide fade"><a href="resume.html">
+          <img src="images/ai.png" alt="Project 3" class="slide-image"></a>
+<!--          <div class="caption">Project 3: Description of Project 3</div>-->
+        </div>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+      </div>
+
+      <div class="card-container">
+        <!-- Square cards for logos -->
+        <div class="card">
+          <a href="#education">
+            <img src="images/wtc.jpeg" alt="WeThinkCode_ Logo">
+          </a>
+        </div>
+        <div class="card">
+          <a href="#trophy">
+            <img src="images/trophy2.jpeg" alt="WeThinkCode_ Logo">
+          </a>        </div>
+        <div class="card">
+          <a href="#tech-stack">
+            <img src="images/gitlab.png" alt="WeThinkCode_ Logo">
+          </a>        </div>
+        <div class="card">
+          <a href="#academic">
+            <img src="images/Screenshot%20from%202024-11-16%2012-45-53.png" alt="WeThinkCode_ Logo">
+          </a>        </div>
+        <!-- Larger card for video -->
+        <div class="card video-card">
+          <video autoplay loop muted>
+            <source src="images/Screencast%20from%202024-11-13%2018-14-03.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="indicator-container">
+      <span class="indicator" onclick="currentSlide(0)"></span>
+      <span class="indicator" onclick="currentSlide(1)"></span>
+      <span class="indicator" onclick="currentSlide(2)"></span>
+      <span class="indicator" onclick="currentSlide(3)"></span>
+      <span class="indicator" onclick="currentSlide(4)"></span>
+    </div>
+  </section>
+
+
+  <section id="about" class="about-section">
+    <h2> About Me</h2>
+    <p>Hello! I’m <strong>Kganya Maleka</strong>,a results driven Developer with a deep expertise in backend development and a focus on creating efficient, maintainable APIs, I bring innovative solutions to every project. As a top 50 student at WeThinkCode_, I have honed my skills in Java, Python, and distributed systems. I’m driven by a desire to always learn and grow, ensuring I stay ahead in an ever-evolving field. Whether optimizing performance or integrating new technologies, I’m committed to delivering solutions that scale with your business.</p>
+  </section>
+    <a href="images/resume.pdf" target="_blank" class="resume-button">View My Resume</a>
+
+
+  <section id="tech-stack">
+<!--    <h2>Tech Stack</h2>-->
+    <div class="tech-container">
+      <div class="tech-item">
+        <img src="images/java.png" alt="Java">
+        <p>Java</p>
+      </div>
+      <div class="tech-item">
+        <img src="images/python.jpeg" alt="Python">
+        <p>Python</p>
+      </div>
+      <div class="tech-item">
+        <img src="images/docker.png" alt="JavaScript">
+        <p>Docker</p>
+      </div>
+      <div class="tech-item">
+        <img src="images/git.png" alt="Docker">
+        <p>Git</p>
+      </div>
+      <div class="tech-item">
+        <img src="images/linux.jpg" alt="Kubernetes">
+        <p>Linux</p>
+      </div>
+      <div class="tech-item">
+        <img src="images/api.png" alt="Kubernetes">
+        <p>API</p>
+      </div>
+      <div class="tech-item">
+        <img src="images/pipeline.png" alt="Kubernetes">
+        <p>DevOps</p>
+      </div>
+      <div class="tech-item">
+        <img src="images/postman.png" alt="Kubernetes">
+        <p>Postman</p>
+      </div>
+      <div class="tech-item">
+        <img src="images/gitlab.png" alt="Kubernetes">
+        <p>Gitlab</p>
+      </div>
+      <div class="tech-item">
+        <img src="images/androids.png" alt="Kubernetes">
+        <p>Android</p>
+      </div>
+      <div class="tech-item">
+        <img src="images/javascript.png" alt="Kubernetes">
+        <p>Javascript</p>
+      </div>
+      <div class="tech-item">
+        <img src="images/github.png" alt="Kubernetes">
+        <p>Github</p>
+      </div>
+      <div class="tech-item">
+        <img src="images/aws.png" alt="Kubernetes">
+        <p>Deploy</p>
+      </div>
+      <div class="tech-item">
+        <img src="images/springboot.jpg" alt="Kubernetes">
+        <p>Spring</p>
+      </div>
+      <div class="tech-item">
+        <img src="images/django.png" alt="Kubernetes">
+        <p>Django</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <h2>Wethinkcode Top 50</h2>
+    <video id="medallion" autoplay loop muted>
+      <source src="images/Screencast%20from%202024-11-13%2018-14-03.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section class="education-section" id="education">
+    <!--    <h2>Education</h2>-->
+    <p><strong>WeThinkCode</strong> - Software Development Training Academy</p>
+    <p>As part of my studies at WeThinkCode, I gained practical skills in software development and participated in real-world projects, including building efficient backend systems, APIs, and complex algorithms.</p>
+    <br>
+    <p><strong>Achievements:</strong> Ranked among the top 50 students in the entire cohort for delivering high-impact software engineering projects. Demonstrated mastery in OOP, transitioning from Python to Java, and excelling in advanced design patterns, consistently exceeding expectations.
+    </p>
+    <br>
+    <p><strong>Academic performance:</strong> 89% in Object-Oriented Programming (OOP) and System Design.
+      <a  id="academic" href="images/report.pdf" target="_blank">View</a>
+    </p>
+  </section>
+
+  <section class="video-section1">
+    <h2> Hackthon Winner</h2>
+    <img id="trophy" src="images/hackathon.png" alt="Kubernetes">
+  </section>
+  <section class="hackathon">
+        <h2>Borderless</h2>
+    <p><strong>Borderless Hackthon</strong> - GeoTech</p>
+    As an integral member of the Geo-Innovators team, I contributed significantly to the award-winning Flood Monitoring and Early Warning System, which earned first place in the GeoTech category at the Bxrderless Hackathon. Leveraging a robust tech stack including Python, Django, and open-source geospatial APIs, I developed a real-time data visualization platform that enabled precise flood prediction and monitoring.
+    I also integrated an AI-powered chatbot to streamline user interactions and access to critical data. By quickly grasping complex concepts and ensuring seamless system integration, I helped unify multiple components into a scalable, user-friendly solution that demonstrated technical innovation and real-world impact within the hackathon's tight 48-hour deadline.
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2023 Kganya Maleka. All Rights Reserved.</p>
+</footer>
+<script>
+  function smoothScroll(target) {
+    const targetElement = document.querySelector(target);
+    const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY; // Get the absolute position
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 3700; // Duration of scroll in milliseconds
+    const offset = window.innerHeight / 2 - targetElement.offsetHeight / 2; // Calculate offset to center the content
+    let startTime = null;
+
+    function scrollAnimation(currentTime) {
+      if (startTime === null) startTime = currentTime; // Initialize start time at the beginning
+      const timeElapsed = currentTime - startTime;
+      const run = ease(timeElapsed, startPosition, distance, duration);
+      window.scrollTo(0, run - offset); // Apply the offset to center
+      if (timeElapsed < duration) requestAnimationFrame(scrollAnimation); // Keep animating until duration is met
+    }
+
+    // Ease function for a smooth scroll effect
+    function ease(t, b, c, d) {
+      const p = 1.5;
+      const a = 0;
+      const easeInOut = (t /= d / 2) < 1
+        ? (c / 2) * t * t + b
+        : (-c / 2) * (--t * (t - 2) - 1) + b;
+      return easeInOut;
+    }
+
+    requestAnimationFrame(scrollAnimation); // Start the scroll animation immediately
+  }
+
+  // Add event listener to all anchor links for smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = this.getAttribute("href");
+      smoothScroll(target);
+    });
+  });
+</script>
+
+
+
+
+<script src="js/home.js"></script>
+
+</body>
+</html>
