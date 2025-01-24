@@ -1,3 +1,6 @@
+const apiBaseUrl = 'https://kganyamaleka-1-7.onrender.com'; // API base URL
+
+
 document.getElementById('send-button').addEventListener('click', async () => {
     const inputField = document.getElementById('word');
     const userMessage = inputField.value;
@@ -8,7 +11,7 @@ document.getElementById('send-button').addEventListener('click', async () => {
     inputField.value = ''; // Clear input field
 
     try {
-        const response = await fetch('https://kganyamaleka-1-6.onrender.com/chat', {
+        const response = await fetch('${apiBaseUrl}/chat', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ message: userMessage })
