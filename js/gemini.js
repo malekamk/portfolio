@@ -1,4 +1,4 @@
-const apiBaseUrl = 'https://kganyamaleka-1-7.onrender.com'; // API base URL
+const apiBaseUrl = 'https://kganyamaleka-1-6.onrender.com'; // API base URL
 
 
 document.getElementById('send-button').addEventListener('click', async () => {

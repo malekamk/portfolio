@@ -5,7 +5,7 @@ async function fetchTopTracksImages(artist) {
     const Artist = artist.replace(/\s+/g, '').toLowerCase(); // Remove spaces and convert to lower case
 
     try {
-        const response = await fetch(`https://kganyamaleka-1-7.onrender.com/api/TopSongs/${Artist}`, {
+        const response = await fetch(`https://kganyamaleka-1-6.onrender.com/api/TopSongs/${Artist}`, {
             method: 'GET'
         });
 
@@ -102,7 +102,7 @@ async function fetchTracksImages(song) {
      const songs = song.replace(/\s+/g, '').toLowerCase(); // Remove spaces and convert to lower case
 
      try {
-         const response = await fetch(`https://kganyamaleka-1-7.onrender.com/api/Songs/${songs}`, {
+         const response = await fetch(`https://kganyamaleka-1-6.onrender.com/api/Songs/${songs}`, {
              method: 'GET'
          });
 
