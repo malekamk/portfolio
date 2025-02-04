@@ -11,7 +11,7 @@ document.getElementById('send-button').addEventListener('click', async () => {
     inputField.value = ''; // Clear input field
 
     try {
-        const response = await fetch('${apiBaseUrl}/chat', {
+        const response = await fetch('https://kganyamaleka-1-6.onrender.com/chat', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ message: userMessage })
