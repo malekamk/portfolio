@@ -281,6 +281,10 @@
     })
   );
 });
+if (window.innerWidth < 768) {
+  document.body.innerHTML = "<h2 style='text-align:center; padding: 20px;'>This site is best viewed on a desktop.</h2>";
+}
+
 
 
   function smoothScroll(target) {
