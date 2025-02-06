@@ -254,6 +254,34 @@
   <p>&copy; 2023 Kganya Maleka. All Rights Reserved.</p>
 </footer>
 <script>
+       if ('serviceWorker' in navigator) {
+           navigator.serviceWorker.register('/service-worker.js')
+           .then(registration => {
+               console.log('Service Worker registered with scope:', registration.scope);
+           })
+           .catch(error => {
+               console.log('Service Worker registration failed:', error);
+           });
+       }
+       self.addEventListener("install", event => {
+  event.waitUntil(
+    caches.open("portfolio-cache").then(cache => {
+      return cache.addAll([
+        "/images/me.jpeg",
+        "/images/wtc.jpeg",
+        "/images/trophy2.jpeg",
+        "/images/Screenshot from 2024-11-16 12-45-53.png",
+        "/images/gitlab.png",
+        "/images/geminii.png",
+        "/images/karol.png",
+        "/images/ai.png",
+        "/images/blxckie.png"
+      ]);
+    })
+  );
+});
+
+
   function smoothScroll(target) {
     const targetElement = document.querySelector(target);
     const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY; // Get the absolute position
