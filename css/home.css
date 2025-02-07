@@ -13,6 +13,19 @@
           padding: 0;
 
     }
+    @media (max-width: 767px) {
+      body * {
+        display: none;
+      }
+      body::before {
+        content: "This site is best viewed on a desktop.";
+        display: block;
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+      }
+    }
+
 
     .header-video {
         position: fixed;
