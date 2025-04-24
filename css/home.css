@@ -584,5 +584,36 @@ video {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
 }
 
+.navbar {
+  background-color: #2d2d2d;
+  padding: 12px 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 24px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border-radius: 6px;
+}
+
+.nav-links li a:hover {
+  background-color: #ffffff;
+  color: #2d2d2d;
+}
+
+
 
 
