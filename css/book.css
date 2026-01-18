@@ -1,0 +1,214 @@
+/* Ensure content doesn't overlap with fixed elements */
+body {
+    padding-top: 100px; /* Adjust this to match the combined height of .top-footer + navbars */
+}
+/* Center images and ensure proper size */
+.carousel-image {
+    width: 90%;
+    height: 640px;
+    object-fit: cover;
+    position: center;
+    border-radius: 15px;
+}
+
+ /* Navigation button size */
+.carousel-control-prev, .carousel-control-next {
+     width: 5%;
+
+ }
+
+/* Adjust button spacing inside captions */
+.carousel-caption .btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 1px;
+
+}
+/* First Navbar (Logo & Search) - Fixed Below the Banner */
+.navbar.bg-light:first-of-type {
+    position: fixed;
+    top: 10px; /* Below the .top-footer */
+    width: 100%;
+    z-index: 1040;
+
+}
+
+/* Second Navbar (Links) - Fixed Below the First Navbar */
+.navbar-expand-lg {
+    position: fixed;
+    top: 80px; /* Below the first navbar */
+    width: 100%;
+    z-index: 1030;
+    border-top: 1px solid #ccc; /* Optional border */
+}
+
+
+/* Navbar styling */
+.navbar-nav .nav-item {
+    padding: 2px;
+
+    position: relative;
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+}
+
+.navbar-nav .nav-link {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 1;
+    transition: color 0.3s ease-in-out;
+    color: #000; /* Default text color */
+}
+
+/* Hover Effect: Change Color */
+.navbar-nav .nav-link:hover {
+    color: #000; /* Change to your preferred hover color */
+}
+
+/* Active State: Smooth Underline */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -3px; /* Adjust for spacing */
+    width: 0;
+    height: 2px;
+    background: #000; /* Change to your preferred active color */
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+/* When Hovered or Active, Show Underline */
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-item .nav-link.active::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Active Link Color */
+.navbar-nav .nav-item .nav-link.active {
+    color: #000; /* Ensure active link remains highlighted */
+}
+
+/* Divider between nav items */
+.navbar-nav .nav-item:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: -2px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ccc;
+    font-size: 15px;
+}
+
+/* Add spacing between search bar and nav */
+.navbar + .navbar {
+    margin-top: 15px;
+}
+
+/* Footer styling */
+.footer {
+    position: sticky;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer img {
+    width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 100px; /* Limit height */
+}
+
+.top-footer {
+    position: fixed;  /* Keeps it at the top while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 13px; /* Adjust height */
+    background: url('/home/lelapa/portfolio/image4.png') no-repeat center center;
+    background-size: cover;
+    z-index: 1050; /* Ensures it's above everything */
+}
+
+/* Editor's Choice Section */
+#editorsChoice {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Full-width container */
+.editor-book-container {
+    display: flex;
+    justify-content: space-between; /* Spread books evenly */
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Stretch across the screen */
+    padding: 20px 5%; /* Adds spacing on sides */
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Moves container up slightly on hover */
+.editor-book-container:hover {
+    transform: translateY(-10px);
+}
+
+/* Book Items */
+.editor-book-item {
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    width: 18%; /* Responsive size for books */
+    height: 350px;
+    flex-shrink: 0;
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 0.8s ease-in-out forwards;
+}
+
+/* Staggered Animation */
+.editor-book-item:nth-child(1) { animation-delay: 0.2s; }
+.editor-book-item:nth-child(2) { animation-delay: 0.4s; }
+.editor-book-item:nth-child(3) { animation-delay: 0.6s; }
+.editor-book-item:nth-child(4) { animation-delay: 0.8s; }
+.editor-book-item:nth-child(5) { animation-delay: 1s; }
+
+/* Ensure full artwork is visible */
+.editor-book-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain; /* Prevents cropping */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Book Title & Author */
+.editor-book-item .book-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.editor-book-item .author-name {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Slide-up effect */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Book Hover: Glow & Lift */
+.editor-book-item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px); /* Moves up slightly */
+}

@@ -4,75 +4,105 @@
   <meta charset="UTF-8">
   <link href="css/home.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Kganya Maleka | Portfolio</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Kganya Maleka - Full Stack Developer specializing in Java, Python, and modern web technologies. Founder of Sabooks and RetailHub. Building digital solutions that connect communities.">
+  <meta name="keywords" content="Full Stack Developer, Java Developer, Python, Web Development, South Africa, Software Engineer">
+  <meta name="author" content="Kganya Maleka">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kganya Maleka | Full Stack Developer">
+  <meta property="og:description" content="Building digital solutions that connect communities and celebrate stories">
+  <meta property="og:image" content="images/me.jpeg">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kganya Maleka | Full Stack Developer">
+  <meta name="twitter:description" content="Building digital solutions that connect communities">
+  
+  <link rel="canonical" href="https://your-portfolio-url.com">
+  
+  <title>Kganya Maleka | Full Stack Developer | Portfolio</title>
 </head>
 <body>
-<header><a href="#about">
-  <img src="images/me.jpeg" alt="Your Profile Picture"></a>
-  <div>
-    <video autoplay loop muted playsinline class="header-video">
-      <source src="images/header.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <h1>KGANYA MALEKA</h1>
-    <a href="#tech-stack">
-    </a>
-    <h1>Full Stack Developer | Java Developer | Innovator</h1>
-    <p>Test Live projects below </p>
+<!-- Navigation Menu -->
+<nav class="main-nav" id="mainNav">
+  <div class="nav-container">
+    <a href="#about" class="nav-logo">KM</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#tech-stack" class="nav-link">Skills</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#hackathon" class="nav-link">Achievements</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+      <span class="theme-icon">🌙</span>
+    </button>
   </div>
+</nav>
 
+<header>
+  <video autoplay loop muted playsinline class="header-video">
+    <source src="images/header.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <a href="#about">
+    <img src="images/me.jpeg" alt="Kganya Maleka Profile Picture">
+  </a>
+  <div>
+    <h1>KGANYA MALEKA</h1>
+    <h1>Full Stack Developer | Java Developer | Innovator</h1>
+    <p>Building digital solutions that connect communities and celebrate stories ✨</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/kganya-maleka/" target="_blank" aria-label="LinkedIn">
+        <img src="images/lll.png" alt="LinkedIn">
+      </a>
+      <a href="mailto:kganyamilton@gmail.com" aria-label="Email">
+        <img src="images/email.png" alt="Email">
+      </a>
+      <a href="https://github.com/malekamk" target="_blank" aria-label="GitHub">
+        <img src="images/g1.png" alt="GitHub">
+      </a>
+      <a href="tel:+27826809683" aria-label="Phone">
+        <img src="images/call.png" alt="Phone">
+      </a>
+    </div>
+  </div>
 </header>
-
-<div class="profileee-container">
-  <a href="https://www.linkedin.com/in/kganya-maleka/">
-    <img src="images/lll.png" alt="Profileee Picture" class="profileee-pic">
-  </a>
-</div>
-
-<div class="profileeee-container">
-  <a href="mailto:kganyamilton@gmail.com">
-    <img src="images/email.png" alt="Profile Picture" class="profileeee-pic">
-  </a>
-</div>
-<div class="profile1-container">
-  <a href="https://github.com/malekamk">
-    <img src="images/g1.png" alt="Profile Picture" class="profile1-pic">
-  </a>
-</div>
-<div class="profile2-container"><a href="tel:+27826809683">
-  <img src="images/call.png" alt="Profile Picture" class="profile2-pic"></a>
-</div>
 
 
 
 <main>
   <section id="projects">
-<!--    <h2>FEATURED PROJECTS</h2>-->
+    <h2 style="text-align: center; margin-bottom: 30px;">🌟 Featured Projects</h2>
     <div class="content-container">
       <!-- Enlarged Slideshow Container -->
       <div class="slideshow-container">
         <div class="slide fade">
-          <a href="spotify.html"  onclick="event.preventDefault(); window.location.href='/spotify';"><img src="images/kelvin.png" alt="Project 1" class="slide-image">
+          <a href="spotify.html"><img src="images/kelvin.png" alt="Spotify Project" class="slide-image" loading="lazy">
           </a>
         </div>
         <div class="slide fade"><a href="gemini.html">
-          <img src="images/geminii.png" alt="Project 2" class="slide-image"></a>
-<!--          <div class="caption">Project 2: Description of Project 2</div>-->
+          <img src="images/geminii.png" alt="Gemini AI Project" class="slide-image" loading="lazy"></a>
         </div>
         <div class="slide fade"><a href="spotify.html">
-          <img src="images/karol.png" alt="Project 3" class="slide-image"></a>
-<!--          <div class="caption">Project 3: Description of Project 3</div>-->
+          <img src="images/karol.png" alt="Music Project" class="slide-image" loading="lazy"></a>
         </div>
 
         <div class="slide fade"><a href="spotify.html">
-          <img src="images/blxckie.png" alt="Project 3" class="slide-image"></a>
-<!--          <div class="caption">Project 3: Description of Project 3</div>-->
+          <img src="images/blxckie.png" alt="Music Discovery Project" class="slide-image" loading="lazy"></a>
         </div>
 
         <div class="slide fade"><a href="resume.html">
-          <img src="images/ai.png" alt="Project 3" class="slide-image"></a>
-<!--          <div class="caption">Project 3: Description of Project 3</div>-->
+          <img src="images/ai.png" alt="AI Resume Builder Project" class="slide-image" loading="lazy"></a>
         </div>
         <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
         <a class="next" onclick="changeSlide(1)">&#10095;</a>
@@ -114,40 +144,178 @@
       <span class="indicator" onclick="currentSlide(3)"></span>
       <span class="indicator" onclick="currentSlide(4)"></span>
     </div>
+    
+    <!-- Featured Projects Section -->
+    <div class="featured-projects">
+      <div class="project-card sabooks-card">
+        <div class="project-image-container">
+          <img src="https://www.sabooksonline.co.za/static/media/logo.8c5a0c0c.svg" alt="Sabooks App Logo" class="project-image" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext x=%2250%22 y=%2250%22 font-size=%2220%22 text-anchor=%22middle%22 fill=%22%2300bcd4%22%3E📚 Sabooks%3C/text%3E%3C/svg%3E';">
+        </div>
+        <h3>Sabooks (SABooksOnline)</h3>
+        <p><strong>Built End-to-End:</strong> I created this entire platform from scratch - API/Backend, Frontend UI, Offline functionality, Payment integration, and everything in between. A complete digital platform celebrating South African literature, making unique voices and township stories accessible to everyone.</p>
+        <div class="project-features">
+          <span class="feature-badge">Full Stack</span>
+          <span class="feature-badge">API/Backend</span>
+          <span class="feature-badge">Offline Support</span>
+          <span class="feature-badge">Payments</span>
+        </div>
+        <div class="project-links">
+          <a href="https://www.sabooksonline.co.za" target="_blank" rel="noopener noreferrer" class="project-link">Visit Website →</a>
+          <a href="https://play.google.com/store/apps/details?id=com.sabooks.app" target="_blank" rel="noopener noreferrer" class="project-link download-link">Download App →</a>
+        </div>
+      </div>
+      
+      <div class="project-card">
+        <div class="project-icon">🛍️</div>
+        <h3>RetailHub</h3>
+        <p>An innovative retail platform connecting communities and empowering local businesses through technology. Building solutions that make commerce more accessible and meaningful.</p>
+        <a href="#experience" class="project-link">Learn More →</a>
+      </div>
+      
+      <div class="project-card">
+        <div class="project-icon">🌊</div>
+        <h3>Flood Monitoring System</h3>
+        <p>Winner of the Bxrderless Hackathon GeoTech category. A real-time flood monitoring and early warning system with AI-powered chatbot integration, built with Python, Django, and geospatial APIs.</p>
+        <a href="#hackathon" class="project-link">View Details →</a>
+      </div>
+    </div>
   </section>
 
+
+  <section id="experience" class="experience-section">
+    <h2>💼 Work Experience</h2>
+    
+    <div class="experience-item">
+      <div class="experience-logo">
+        <div class="logo-placeholder">📚</div>
+      </div>
+      <div class="experience-content">
+        <h3>Founder & Full Stack Developer</h3>
+        <h4>Sabooks (SABooksOnline)</h4>
+        <p class="experience-date">2023 - Present</p>
+        <p><strong>Built End-to-End:</strong> Created this entire platform from scratch - designed and developed the complete API/Backend, Frontend UI, Offline functionality, Payment integration, and all features. Leading the development of a digital platform celebrating South African literature, making unique voices and township stories accessible to everyone.</p>
+        <ul>
+          <li>Architected and developed the full-stack platform end-to-end (API/Backend, Frontend, Database)</li>
+          <li>Implemented offline functionality and payment processing systems</li>
+          <li>Built responsive UI/UX from scratch with modern web technologies</li>
+          <li>Managed product development, content acquisition, and partnerships</li>
+          <li>Established partnerships with authors and publishers across South Africa</li>
+          <li>Grew platform user base and engagement through strategic development</li>
+        </ul>
+        <div class="company-links">
+          <a href="https://www.sabooksonline.co.za" target="_blank" rel="noopener noreferrer" class="company-link">Visit Website →</a>
+          <a href="https://play.google.com/store/apps/details?id=com.sabooks.app" target="_blank" rel="noopener noreferrer" class="company-link">Download App →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="experience-item">
+      <div class="experience-logo">
+        <div class="logo-placeholder">🛍️</div>
+      </div>
+      <div class="experience-content">
+        <h3>Co-Founder & Tech Lead</h3>
+        <h4>RetailHub</h4>
+        <p class="experience-date">2023 - Present</p>
+        <p>Building innovative retail solutions that connect communities and empower local businesses through technology. Leading technical architecture and development of e-commerce platforms and retail management systems.</p>
+        <ul>
+          <li>Designed and implemented scalable backend architecture for retail marketplace</li>
+          <li>Developed e-commerce workflows and payment integrations</li>
+          <li>Led cross-functional collaboration with design, marketing, and customer support teams</li>
+          <li>Drove platform growth and vendor onboarding initiatives</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="experience-item">
+      <div class="experience-logo">
+        <img src="images/wtc.jpeg" alt="WeThinkCode Logo" class="company-logo">
+      </div>
+      <div class="experience-content">
+        <h3>Software Development Student</h3>
+        <h4>WeThinkCode_</h4>
+        <p class="experience-date">2022 - 2024</p>
+        <p>Intensive software development training program focusing on practical, real-world projects. Specialized in backend development, system integration, and building scalable applications.</p>
+        <ul>
+          <li>Ranked among top 50 students in cohort for high-impact software engineering projects</li>
+          <li>Mastered Object-Oriented Programming, achieving 89% in OOP and System Design</li>
+          <li>Successfully transitioned from Python to Java, excelling in advanced design patterns</li>
+          <li>Specialized in System Integration during final semester</li>
+          <li>Built efficient backend systems, APIs, and complex algorithms</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <section id="about" class="about-section">
-    <h2> About Me</h2>
-    <p>I’m <strong>Kganya Maleka</strong>, a passionate and results-driven Full-Stack Developer with expertise in backend development, API design, and system architecture. I specialize in building scalable, efficient, and fault-tolerant applications using Java (Java 21), Python, JavaScript, and modern web frameworks.
-
-      I have mastered Java, Python, JavaScript, and web development fundamentals, making it easy for me to adapt to any programming language or framework. I follow the Software Development Life Cycle (SDLC) to ensure well-structured and maintainable solutions.
+    <h2>👋 Hey there! I'm Kganya</h2>
+    <p>I'm a passionate Full-Stack Developer who loves building digital solutions that make a real difference. Whether it's making South African literature accessible to everyone or creating platforms that connect communities, I'm all about using technology to tell stories and build meaningful connections.
+      <br><br>
+      <strong>What I'm passionate about:</strong>
       <br>
+      📚 <strong>Sabooks (SABooksOnline)</strong> - I created this entire platform end-to-end (API/Backend, Frontend UI, Offline functionality, Payment integration). A growing platform that celebrates South African literature, making unique voices and township stories accessible to everyone. Available on web and mobile app.
+      <br><br>
+      🛍️ <strong>RetailHub</strong> - Building innovative retail solutions that connect communities and empower local businesses through technology.
+      <br><br>
+      <strong>My Tech Stack:</strong>
       <br>
-      Tech Stack & Expertise:
-
+      ✔ <strong>Backend:</strong> Java (Spring Boot), Python (Django), Hibernate, RESTful APIs, microservices, messaging systems (ActiveMQ, ntfy.sh)
       <br>
+      ✔ <strong>Frontend:</strong> HTML, CSS, JavaScript, React.js
       <br>
-
-      ✔ Backend: Java (Spring Boot), Python (Django), Hibernate, RESTful APIs, microservices, messaging systems (ActiveMQ, ntfy.sh).
+      ✔ <strong>DevOps & Cloud:</strong> Docker, CI/CD automation, cloud deployment (Render)
       <br>
-      ✔ Frontend: HTML, CSS, JavaScript, React.js.
-
-      <br>
-      ✔ DevOps & Cloud: Docker, CI/CD automation, cloud deployment (Render).
-
-      <br>
-      ✔ System Integration: Specialized in System Integration during my final semester at WeThinkCode_.
-
-      <br>
-      <br>
-
-
-      I am always learning and quick to adapt to new technologies, staying ahead of industry trends. My achievements include being ranked among the top 50 students at WeThinkCode_ and winning first place in the Bxrderless Hackathon for developing a Flood Monitoring and Early Warning System.
-
-      I am currently seeking a challenging internship or entry-level role where I can contribute to impactful projects while continuing to grow as a developer. Let’s connect and build something great together!</p>
+      ✔ <strong>Specialization:</strong> System Integration (final semester focus at WeThinkCode_)
+      <br><br>
+      <strong>What drives me:</strong> I'm always learning and quick to adapt to new technologies. I believe great things happen when you combine technical skills with a genuine passion for solving real-world problems.
+      <br><br>
+      <strong>Some highlights:</strong> Ranked among the top 50 students at WeThinkCode_ 🏆 and won first place in the Bxrderless Hackathon for developing a Flood Monitoring and Early Warning System that could save lives.
+      <br><br>
+      I'm currently seeking exciting opportunities where I can contribute to impactful projects while continuing to grow. Let's connect and build something amazing together! 🚀</p>
   </section>
-    <a href="KGANYA.pdf" target="_blank" class="resume-button">View My Resume</a>
+  
+  <div class="resume-buttons">
+    <a href="KGANYA.pdf" download="Kganya_Maleka_Resume.pdf" class="resume-button" id="resumeDownload">📥 Download Resume</a>
+    <a href="images/report.pdf" download="Academic_Report.pdf" class="resume-button" id="reportDownload">📊 Download Academic Report</a>
+    <a href="#experience" class="resume-button">💼 View Experience</a>
+  </div>
+
+  <!-- Quick Wins Section -->
+  <section id="quick-wins" class="quick-wins-section">
+    <h2>⚡ Quick Wins & Key Features</h2>
+    <div class="quick-wins-grid">
+      <div class="quick-win-card">
+        <div class="quick-win-icon">🚀</div>
+        <h3>End-to-End Development</h3>
+        <p>Built complete applications from API/Backend to Frontend UI, including offline support and payment integration</p>
+      </div>
+      <div class="quick-win-card">
+        <div class="quick-win-icon">💳</div>
+        <h3>Payment Integration</h3>
+        <p>Seamless payment processing integrated into all platforms for smooth user transactions</p>
+      </div>
+      <div class="quick-win-card">
+        <div class="quick-win-icon">📱</div>
+        <h3>Offline Support</h3>
+        <p>Progressive Web Apps with offline functionality - users can continue working without internet</p>
+      </div>
+      <div class="quick-win-card">
+        <div class="quick-win-icon">🔧</div>
+        <h3>Full Stack API</h3>
+        <p>RESTful APIs and microservices architecture built from scratch for scalable solutions</p>
+      </div>
+      <div class="quick-win-card">
+        <div class="quick-win-icon">🎨</div>
+        <h3>Custom UI/UX</h3>
+        <p>Beautiful, responsive interfaces designed and developed with user experience in mind</p>
+      </div>
+      <div class="quick-win-card">
+        <div class="quick-win-icon">📥</div>
+        <h3>Working Downloads</h3>
+        <p>All download links verified and working - Resume, Reports, and App downloads available</p>
+      </div>
+    </div>
+  </section>
 
 
   <section id="tech-stack">
@@ -216,115 +384,190 @@
     </div>
   </section>
 
-  <section class="video-section">
-    <h2>Wethinkcode Top 50</h2>
-    <video id="medallion" autoplay loop muted>
-      <source src="images/Screencast%20from%202024-11-13%2018-14-03.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </section>
-
   <section class="education-section" id="education">
-    <!--    <h2>Education</h2>-->
-    <p><strong>WeThinkCode</strong> - Software Development Training Academy</p>
-    <p>As part of my studies at WeThinkCode, I gained practical skills in software development and participated in real-world projects, including building efficient backend systems, APIs, and complex algorithms.</p>
-    <br>
-    <p><strong>Achievements:</strong> Ranked among the top 50 students in the entire cohort for delivering high-impact software engineering projects. Demonstrated mastery in OOP, transitioning from Python to Java, and excelling in advanced design patterns, consistently exceeding expectations.
+    <h2>🎓 Education</h2>
+    <p><strong>WeThinkCode_</strong> - Software Development Training Academy</p>
+    <p>My journey at WeThinkCode_ was transformative! I gained hands-on experience in software development and worked on real-world projects, building everything from efficient backend systems to complex APIs and algorithms.</p>
+    <p><strong>🏆 Achievements:</strong> Ranked among the top 50 students in the entire cohort for delivering high-impact software engineering projects. I mastered Object-Oriented Programming, smoothly transitioned from Python to Java, and excelled in advanced design patterns - consistently exceeding expectations!</p>
+    <p><strong>📊 Academic Performance:</strong> Achieved 89% in Object-Oriented Programming (OOP) and System Design.
+      <a id="academic" href="images/report.pdf" download="Academic_Report.pdf" target="_blank">Download Report</a>
     </p>
-    <br>
-    <p><strong>Academic performance:</strong> 89% in Object-Oriented Programming (OOP) and System Design.
-      <a  id="academic" href="images/report.pdf" target="_blank">View</a>
-    </p>
+    <div class="video-section" style="margin-top: 20px;">
+      <video id="medallion" autoplay loop muted playsinline>
+        <source src="images/Screencast%20from%202024-11-13%2018-14-03.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
   </section>
 
-  <section class="video-section1">
-    <h2> Hackthon Winner</h2>
-    <img id="trophy" src="images/hackathon.png" alt="Kubernetes">
-  </section>
-  <section class="hackathon">
-        <h2>Borderless</h2>
-    <p><strong>Borderless Hackthon</strong> - GeoTech</p>
-    As an integral member of the Geo-Innovators team, I contributed significantly to the award-winning Flood Monitoring and Early Warning System, which earned first place in the GeoTech category at the Bxrderless Hackathon. Leveraging a robust tech stack including Python, Django, and open-source geospatial APIs, I developed a real-time data visualization platform that enabled precise flood prediction and monitoring.
-    I also integrated an AI-powered chatbot to streamline user interactions and access to critical data. By quickly grasping complex concepts and ensuring seamless system integration, I helped unify multiple components into a scalable, user-friendly solution that demonstrated technical innovation and real-world impact within the hackathon's tight deadline.
+  <section class="hackathon" id="hackathon">
+    <h2>🏆 Borderless Hackathon Winner</h2>
+    <p><strong>GeoTech Category - First Place</strong></p>
+    <div style="text-align: center; margin: 20px 0;">
+      <img id="trophy" src="images/hackathon.png" alt="Hackathon Trophy" style="max-width: 100%; height: auto; border-radius: 12px;">
+    </div>
+    <p>As an integral member of the Geo-Innovators team, I contributed significantly to our award-winning Flood Monitoring and Early Warning System! 🌊</p>
+    <p><strong>What we built:</strong> A real-time data visualization platform that enables precise flood prediction and monitoring, helping communities stay safe during natural disasters.</p>
+    <p><strong>Tech Stack:</strong> Python, Django, open-source geospatial APIs, and an AI-powered chatbot for streamlined user interactions.</p>
+    <p><strong>The impact:</strong> By quickly grasping complex concepts and ensuring seamless system integration, I helped unify multiple components into a scalable, user-friendly solution that demonstrated technical innovation and real-world impact - all within the hackathon's tight deadline!</p>
+    <p>This project showed me how technology can truly make a difference in people's lives, and it's something I'm incredibly proud of! 💪</p>
   </section>
 
 </main>
 
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M18 15l-6-6-6 6"/>
+  </svg>
+</button>
+
 <footer>
-  <p>&copy; 2023 Kganya Maleka. All Rights Reserved.</p>
+  <p>&copy; 2024 Kganya Maleka. All Rights Reserved.</p>
+  <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">Let's connect and build something amazing together! 🚀</p>
 </footer>
 <script>
-       if ('serviceWorker' in navigator) {
-           navigator.serviceWorker.register('/service-worker.js')
-           .then(registration => {
-               console.log('Service Worker registered with scope:', registration.scope);
-           })
-           .catch(error => {
-               console.log('Service Worker registration failed:', error);
-           });
-       }
-       self.addEventListener("install", event => {
-  event.waitUntil(
-    caches.open("portfolio-cache").then(cache => {
-      return cache.addAll([
-        "/images/me.jpeg",
-        "/images/Screencast from 2024-11-13 18-14-03.mp4",
-        "/images/wtc.jpeg",
-        "/images/trophy2.jpeg",
-        "/images/Screenshot from 2024-11-16 12-45-53.png",
-        "/images/gitlab.png",
-        "/images/geminii.png",
-        "/images/karol.png",
-        "/images/ai.png",
-        "/images/blxckie.png"
-      ]);
-    })
-  );
-});
-if (window.innerWidth < 768) {
-  document.body.innerHTML = "<h2 style='text-align:center; padding: 20px;'>This site is best viewed on a desktop.</h2>";
-}
-
-
-
-  function smoothScroll(target) {
-    const targetElement = document.querySelector(target);
-    const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY; // Get the absolute position
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
-    const duration = 3700; // Duration of scroll in milliseconds
-    const offset = window.innerHeight / 2 - targetElement.offsetHeight / 2; // Calculate offset to center the content
-    let startTime = null;
-
-    function scrollAnimation(currentTime) {
-      if (startTime === null) startTime = currentTime; // Initialize start time at the beginning
-      const timeElapsed = currentTime - startTime;
-      const run = ease(timeElapsed, startPosition, distance, duration);
-      window.scrollTo(0, run - offset); // Apply the offset to center
-      if (timeElapsed < duration) requestAnimationFrame(scrollAnimation); // Keep animating until duration is met
-    }
-
-    // Ease function for a smooth scroll effect
-    function ease(t, b, c, d) {
-      const p = 1.5;
-      const a = 0;
-      const easeInOut = (t /= d / 2) < 1
-        ? (c / 2) * t * t + b
-        : (-c / 2) * (--t * (t - 2) - 1) + b;
-      return easeInOut;
-    }
-
-    requestAnimationFrame(scrollAnimation); // Start the scroll animation immediately
-  }
-
-  // Add event listener to all anchor links for smooth scroll
+  // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
+      const href = this.getAttribute("href");
+      if (href === "#") return;
+      
       e.preventDefault();
-      const target = this.getAttribute("href");
-      smoothScroll(target);
+      const target = document.querySelector(href);
+      if (target) {
+        const headerOffset = 80;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
     });
   });
+
+  // Service Worker registration (optional)
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(registration => {
+        console.log('Service Worker registered');
+      })
+      .catch(error => {
+        console.log('Service Worker registration failed:', error);
+      });
+  }
+
+  // Mobile Navigation Toggle
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+  
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      navToggle.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+      });
+    });
+  }
+
+  // Back to Top Button
+  const backToTop = document.getElementById('backToTop');
+  
+  if (backToTop) {
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTop.classList.add('show');
+      } else {
+        backToTop.classList.remove('show');
+      }
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  // Active navigation link highlighting
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  function highlightNav() {
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(section => {
+      const sectionHeight = section.offsetHeight;
+      const sectionTop = section.offsetTop - 100;
+      const sectionId = section.getAttribute('id');
+
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', highlightNav);
+
+  // Dark/Light Mode Toggle
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = themeToggle.querySelector('.theme-icon');
+  const currentTheme = localStorage.getItem('theme') || 'dark';
+
+  // Set initial theme
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  updateThemeIcon(currentTheme);
+
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
+  });
+
+  function updateThemeIcon(theme) {
+    themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+  }
+
+  // Verify download links
+  function verifyLinks() {
+    const links = document.querySelectorAll('a[download], a[href$=".pdf"]');
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href && !href.startsWith('http')) {
+          // Local file - check if exists (basic check)
+          fetch(href, { method: 'HEAD' })
+            .then(response => {
+              if (!response.ok) {
+                console.warn('Link may be broken:', href);
+              }
+            })
+            .catch(() => {
+              console.warn('Could not verify link:', href);
+            });
+        }
+      });
+    });
+  }
+
+  verifyLinks();
 </script>
 
 

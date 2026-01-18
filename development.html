@@ -3,25 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Test My API - /nelson</title>
+  <title>Webhook Tester – /nelson API</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 2rem;
-      background-color: #f5f5f5;
+      color: #333;
     }
+
+    h1 {
+      color: #006064;
+    }
+
+    label {
+      font-weight: 600;
+    }
+
     input, button {
-      padding: 0.5rem;
+      padding: 0.75rem;
       margin: 0.5rem 0;
       width: 100%;
       max-width: 400px;
-    }
-    #response {
-      margin-top: 1rem;
-      background: #fff;
-      padding: 1rem;
       border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #006064;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #004d4d;
+    }
+
+    #response {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: #fafafa;
+      border-left: 4px solid #006064;
+      width: 100%;
+      max-width: 600px;
       white-space: pre-wrap;
+      font-family: monospace;
+    }
+
+    .note, .links {
+      max-width: 600px;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .links a {
+      color: #00796b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -34,10 +81,24 @@
 <label>Word to sort (required):</label><br>
 <input type="text" id="data" placeholder="e.g., hello" required /><br>
 
-<button onclick="submit()">Send to /nelson</button>
+<button onclick="submit()">Send to API</button>
+
+<div class="note">
+  <p>⏳ <strong>Note:</strong> The server is hosted on Render. It may take a few moments to respond if the instance is asleep (cold start).</p>
+</div>
 
 <h2>Response:</h2>
 <div id="response">Waiting for input...</div>
+
+<div class="links">
+  <p>🔗 View the project:</p>
+  <p>
+    <a href="https://portfolio-a1v7.onrender.com/" target="_blank">My portfolio</a> |
+    <a href="https://portfolio-a1v7.onrender.com/spotify.html" target="_blank">Spotify Clone</a> |
+    <a href="https://portfolio-a1v7.onrender.com/gemini.html" target="_blank">Gemini Clone</a> |
+    <a href="https://environment365-qhpp.onrender.com/nelson" target="_blank">API Endpoint</a>
+  </p>
+</div>
 
 <script>
   async function submit() {
@@ -50,7 +111,7 @@
       return;
     }
 
-    responseBox.textContent = "Sending...";
+    responseBox.textContent = "⏳ Sending request... Please wait.";
 
     try {
       const res = await fetch("https://environment365-qhpp.onrender.com/nelson", {
@@ -62,7 +123,7 @@
       const result = await res.json();
       responseBox.textContent = JSON.stringify(result, null, 2);
     } catch (err) {
-      responseBox.textContent = "Error: " + err.message;
+      responseBox.textContent = "❌ Error: " + err.message;
     }
   }
 </script>
