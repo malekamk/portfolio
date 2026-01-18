@@ -483,6 +483,7 @@ ul li {
 
 .project-content-left {
   flex: 1;
+  max-width: 35%;
   display: flex;
   gap: 20px;
   align-items: flex-start;
@@ -551,8 +552,8 @@ ul li {
 }
 
 .project-preview {
-  flex: 1;
-  max-width: 50%;
+  flex: 1.5;
+  max-width: 60%;
   overflow: hidden;
 }
 
@@ -951,8 +952,12 @@ footer p {
     gap: 60px;
   }
   
+  .project-content-left {
+    max-width: 30%;
+  }
+  
   .project-preview {
-    max-width: 45%;
+    max-width: 65%;
   }
 
   .experience-item {
@@ -991,8 +996,12 @@ footer p {
     gap: 80px;
   }
   
+  .project-content-left {
+    max-width: 25%;
+  }
+  
   .project-preview {
-    max-width: 40%;
+    max-width: 70%;
   }
   
   .slideshow-container.compact {
