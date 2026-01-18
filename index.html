@@ -77,11 +77,54 @@
   <section id="projects">
     <h2>Projects</h2>
     
-    <!-- Slideshow Container -->
-    <div class="slideshow-container">
+    <!-- Featured Projects Section -->
+    <div class="featured-projects">
+      <div class="project-card sabooks-project">
+        <div class="project-content-left">
+          <div class="project-logo">
+            <img src="icon.jpeg" alt="Sabooks Logo" class="project-logo-img">
+          </div>
+          <div class="project-info">
+            <h3>Sabooks</h3>
+            <p>Built end-to-end platform for South African literature - API/Backend, Frontend, Offline support, Payment integration.</p>
+            <div class="project-links">
+              <a href="https://www.sabooksonline.co.za" target="_blank" rel="noopener noreferrer" class="project-link">Website</a>
+              <a href="https://play.google.com/store/apps/details?id=com.sabooks.app" target="_blank" rel="noopener noreferrer" class="project-link">Download</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-preview">
+          <img src="saboappScreenshots.png" alt="Sabooks App Screenshots" class="app-screenshots" loading="lazy">
+        </div>
+      </div>
+      
+      <div class="project-card">
+        <div class="project-content-left">
+          <div class="project-info">
+            <h3>RetailHub</h3>
+            <p>Retail platform connecting communities and empowering local businesses through technology.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="project-card">
+        <div class="project-content-left">
+          <div class="project-info">
+            <h3>Flood Monitoring System</h3>
+            <p>Winner - Bxrderless Hackathon GeoTech category. Real-time flood monitoring with AI chatbot integration.</p>
+            <a href="#hackathon" class="project-link">Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compact Carousel Section -->
+  <section id="other-projects" class="compact-carousel-section">
+    <h2>Other Projects</h2>
+    <div class="slideshow-container compact">
       <div class="slide fade">
-        <a href="spotify.html"><img src="images/kelvin.png" alt="Spotify Project" class="slide-image" loading="lazy">
-        </a>
+        <a href="spotify.html"><img src="images/kelvin.png" alt="Spotify Project" class="slide-image" loading="lazy"></a>
       </div>
       <div class="slide fade"><a href="gemini.html">
         <img src="images/geminii.png" alt="Gemini AI Project" class="slide-image" loading="lazy"></a>
@@ -98,40 +141,12 @@
       <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
       <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
-
-    <!-- Slide Indicators -->
     <div class="indicator-container">
       <span class="indicator" onclick="currentSlide(0)"></span>
       <span class="indicator" onclick="currentSlide(1)"></span>
       <span class="indicator" onclick="currentSlide(2)"></span>
       <span class="indicator" onclick="currentSlide(3)"></span>
       <span class="indicator" onclick="currentSlide(4)"></span>
-    </div>
-    
-    <!-- Featured Projects Section -->
-    <div class="featured-projects">
-      <div class="project-card sabooks-project">
-        <div class="project-preview">
-          <img src="saboappScreenshots.png" alt="Sabooks App Screenshots" class="app-screenshots" loading="lazy">
-        </div>
-        <h3>Sabooks</h3>
-        <p>Built end-to-end platform for South African literature - API/Backend, Frontend, Offline support, Payment integration.</p>
-        <div class="project-links">
-          <a href="https://www.sabooksonline.co.za" target="_blank" rel="noopener noreferrer" class="project-link">Website</a>
-          <a href="https://play.google.com/store/apps/details?id=com.sabooks.app" target="_blank" rel="noopener noreferrer" class="project-link">Download</a>
-        </div>
-      </div>
-      
-      <div class="project-card">
-        <h3>RetailHub</h3>
-        <p>Retail platform connecting communities and empowering local businesses through technology.</p>
-      </div>
-      
-      <div class="project-card">
-        <h3>Flood Monitoring System</h3>
-        <p>Winner - Bxrderless Hackathon GeoTech category. Real-time flood monitoring with AI chatbot integration.</p>
-        <a href="#hackathon" class="project-link">Details</a>
-      </div>
     </div>
   </section>
 
