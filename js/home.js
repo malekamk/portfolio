@@ -11,29 +11,29 @@ function currentSpotifySlide(n) {
 }
 
 function showSpotifySlide(n) {
-  let slides = document.getElementsByClassName("spotify-slide");
+  let slideLinks = document.getElementsByClassName("spotify-slide-link");
   let indicators = document.getElementsByClassName("spotify-indicator");
 
-  if (slides.length === 0) return;
+  if (slideLinks.length === 0) return;
 
-  if (n >= slides.length) {
+  if (n >= slideLinks.length) {
     currentSpotifySlideIndex = 0;
   }
   if (n < 0) {
-    currentSpotifySlideIndex = slides.length - 1;
+    currentSpotifySlideIndex = slideLinks.length - 1;
   }
 
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].classList.remove("active");
-    slides[i].style.display = "none";
+  for (let i = 0; i < slideLinks.length; i++) {
+    slideLinks[i].classList.remove("active");
+    slideLinks[i].style.display = "none";
   }
   for (let i = 0; i < indicators.length; i++) {
     indicators[i].classList.remove("active");
   }
 
-  if (slides[currentSpotifySlideIndex]) {
-    slides[currentSpotifySlideIndex].style.display = "block";
-    slides[currentSpotifySlideIndex].classList.add("active");
+  if (slideLinks[currentSpotifySlideIndex]) {
+    slideLinks[currentSpotifySlideIndex].style.display = "block";
+    slideLinks[currentSpotifySlideIndex].classList.add("active");
   }
   if (indicators[currentSpotifySlideIndex]) {
     indicators[currentSpotifySlideIndex].classList.add("active");

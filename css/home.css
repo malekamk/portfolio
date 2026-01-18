@@ -587,6 +587,75 @@ ul li {
   object-fit: contain;
 }
 
+/* Sabooks App Store Overlay */
+.sabooks-image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.sabooks-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.sabooks-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+.sabooks-preview:hover .sabooks-overlay {
+  opacity: 1;
+}
+
+.sabooks-preview:hover .sabooks-image-wrapper img {
+  opacity: 0.8;
+}
+
+.store-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #000000;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: transform 0.2s ease, background 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.store-button:hover {
+  transform: scale(1.05);
+  background: #ffffff;
+}
+
+.store-button svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.store-button span {
+  white-space: nowrap;
+}
+
 /* Spotify Clone Carousel */
 .spotify-slideshow-container {
   position: relative;
@@ -595,13 +664,24 @@ ul li {
   border-radius: 8px;
 }
 
-.spotify-slide {
+.spotify-slide-link {
   display: none;
   width: 100%;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.spotify-slide.active {
+.spotify-slide-link.active {
   display: block;
+}
+
+.spotify-slide {
+  width: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.spotify-slide:hover {
+  opacity: 0.9;
 }
 
 .spotify-slide img {
