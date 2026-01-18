@@ -300,19 +300,20 @@ main {
 }
 
 section {
-  background: var(--bg-section);
-  border-radius: 15px;
-  padding: 30px;
-  margin: 30px 0;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  border: 1px solid var(--border-color);
+  background: transparent;
+  border-radius: 0;
+  padding: 40px 20px;
+  margin: 0;
+  border-bottom: 1px solid var(--border-color);
 }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: var(--primary-color);
-  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: var(--text-light);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 h3 {
@@ -473,54 +474,42 @@ ul li {
 }
 
 .project-card {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-  border-radius: 15px;
-  padding: 25px;
-  box-shadow: 0 8px 20px rgba(0, 188, 212, 0.2);
-  transition: transform 0.3s ease;
-  border: 1px solid var(--border-color);
+  background: transparent;
+  border-radius: 0;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-color);
+  transition: none;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 188, 212, 0.4);
-}
-
-.project-icon {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  text-align: center;
+.project-card:last-child {
+  border-bottom: none;
 }
 
 .project-card h3 {
-  color: var(--primary-color);
-  font-size: 1.3rem;
-  margin-bottom: 15px;
-  text-align: center;
+  color: var(--text-light);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .project-card p {
-  color: var(--text-light);
+  color: var(--text-muted);
   font-size: 0.95rem;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .project-link {
-  display: block;
-  text-align: center;
+  display: inline-block;
   color: var(--primary-color);
   text-decoration: none;
-  font-weight: bold;
-  padding: 10px 20px;
-  border: 2px solid var(--primary-color);
-  border-radius: 25px;
-  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  margin-right: 15px;
+  transition: opacity 0.3s ease;
 }
 
 .project-link:hover {
-  background-color: var(--primary-color);
-  color: #000;
+  opacity: 0.7;
 }
 
 .project-image-container {
@@ -635,15 +624,15 @@ ul li {
 
 /* Experience Section */
 .experience-section {
-  padding: 30px 20px;
+  padding: 40px 20px;
 }
 
 .experience-item {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   margin-bottom: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -678,15 +667,17 @@ ul li {
 }
 
 .experience-content h3 {
-  color: var(--primary-color);
-  font-size: 1.3rem;
+  color: var(--text-light);
+  font-size: 1.1rem;
   margin-bottom: 5px;
+  font-weight: 600;
 }
 
 .experience-content h4 {
-  color: var(--text-light);
-  font-size: 1.1rem;
+  color: var(--text-muted);
+  font-size: 1rem;
   margin-bottom: 8px;
+  font-weight: 400;
 }
 
 .experience-date {
@@ -841,48 +832,46 @@ ul li {
 /* Resume Buttons */
 .resume-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
-  margin: 30px 0;
-  padding: 0 20px;
+  flex-direction: row;
+  gap: 0;
+  align-items: flex-start;
+  margin: 40px 20px;
+  padding: 0;
 }
 
 .resume-button {
   display: inline-block;
-  background-color: var(--primary-color);
-  color: #000;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 12px 30px;
+  background: transparent;
+  color: var(--text-light);
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px 0;
   border: none;
-  border-radius: 25px;
+  border-bottom: 1px solid var(--border-color);
   text-decoration: none;
-  transition: all 0.3s ease;
-  text-align: center;
-  width: 100%;
-  max-width: 300px;
+  transition: border-color 0.3s ease;
+  text-align: left;
+  width: auto;
+  margin-right: 30px;
 }
 
 .resume-button:hover {
-  background-color: #00a0b0;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 188, 212, 0.4);
+  border-bottom-color: var(--primary-color);
 }
 
 /* Footer */
 footer {
-  background-color: #1c1c1c;
-  color: var(--text-light);
-  text-align: center;
-  padding: 30px 20px;
-  margin-top: 50px;
+  background: transparent;
+  color: var(--text-muted);
+  text-align: left;
+  padding: 40px 20px;
+  margin-top: 0;
   border-top: 1px solid var(--border-color);
+  font-size: 0.9rem;
 }
 
 footer p {
-  margin: 10px 0;
-  color: var(--text-muted);
+  margin: 0;
 }
 
 /* Mobile Navigation */
