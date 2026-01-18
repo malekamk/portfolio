@@ -1,37 +1,51 @@
-let currentSlideIndex = 0;
-  showSlide(currentSlideIndex);
+// Spotify Clone Carousel
+let currentSpotifySlideIndex = 0;
+showSpotifySlide(currentSpotifySlideIndex);
 
-  function changeSlide(n) {
-    showSlide(currentSlideIndex += n);
+function changeSpotifySlide(n) {
+  showSpotifySlide(currentSpotifySlideIndex += n);
+}
+
+function currentSpotifySlide(n) {
+  showSpotifySlide(currentSpotifySlideIndex = n);
+}
+
+function showSpotifySlide(n) {
+  let slides = document.getElementsByClassName("spotify-slide");
+  let indicators = document.getElementsByClassName("spotify-indicator");
+
+  if (slides.length === 0) return;
+
+  if (n >= slides.length) {
+    currentSpotifySlideIndex = 0;
+  }
+  if (n < 0) {
+    currentSpotifySlideIndex = slides.length - 1;
   }
 
-  function currentSlide(n) {
-    showSlide(currentSlideIndex = n);
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+    slides[i].style.display = "none";
+  }
+  for (let i = 0; i < indicators.length; i++) {
+    indicators[i].classList.remove("active");
   }
 
-  function showSlide(n) {
-    let slides = document.getElementsByClassName("slide");
-    let indicators = document.getElementsByClassName("indicator");
-
-    if (n >= slides.length) {
-      currentSlideIndex = 0;
-    }
-    if (n < 0) {
-      currentSlideIndex = slides.length - 1;
-    }
-
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (let i = 0; i < indicators.length; i++) {
-      indicators[i].className = indicators[i].className.replace(" active", "");
-    }
-
-    slides[currentSlideIndex].style.display = "block";
-    indicators[currentSlideIndex].className += " active";
+  if (slides[currentSpotifySlideIndex]) {
+    slides[currentSpotifySlideIndex].style.display = "block";
+    slides[currentSpotifySlideIndex].classList.add("active");
   }
+  if (indicators[currentSpotifySlideIndex]) {
+    indicators[currentSpotifySlideIndex].classList.add("active");
+  }
+}
 
-  setInterval(() => { changeSlide(1); }, 5000);
+// Auto-advance Spotify carousel
+setInterval(() => { 
+  if (document.getElementsByClassName("spotify-slide").length > 0) {
+    changeSpotifySlide(1); 
+  }
+}, 4000);
 
   window.addEventListener("resize", adjustAnimationSpeed);
 

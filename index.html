@@ -108,7 +108,24 @@
           </div>
         </div>
         <div class="project-preview">
-          <img src="images/kelvin.png" alt="Spotify Clone Project" class="app-screenshots" loading="lazy">
+          <div class="spotify-slideshow-container">
+            <div class="spotify-slide fade active">
+              <img src="images/kelvin.png" alt="Spotify Clone Project" class="app-screenshots" loading="lazy">
+            </div>
+            <div class="spotify-slide fade">
+              <img src="images/karol.png" alt="Spotify Clone Project" class="app-screenshots" loading="lazy">
+            </div>
+            <div class="spotify-slide fade">
+              <img src="images/blxckie.png" alt="Spotify Clone Project" class="app-screenshots" loading="lazy">
+            </div>
+            <a class="spotify-prev" onclick="changeSpotifySlide(-1)">&#10094;</a>
+            <a class="spotify-next" onclick="changeSpotifySlide(1)">&#10095;</a>
+          </div>
+          <div class="spotify-indicator-container">
+            <span class="spotify-indicator active" onclick="currentSpotifySlide(0)"></span>
+            <span class="spotify-indicator" onclick="currentSpotifySlide(1)"></span>
+            <span class="spotify-indicator" onclick="currentSpotifySlide(2)"></span>
+          </div>
         </div>
       </div>
       
@@ -136,36 +153,6 @@
     </div>
   </section>
 
-  <!-- Compact Carousel Section -->
-  <section id="other-projects" class="compact-carousel-section">
-    <h2>Other Projects</h2>
-    <div class="slideshow-container compact">
-      <div class="slide fade">
-        <a href="spotify.html"><img src="images/kelvin.png" alt="Spotify Project" class="slide-image" loading="lazy"></a>
-      </div>
-      <div class="slide fade"><a href="gemini.html">
-        <img src="images/geminii.png" alt="Gemini AI Project" class="slide-image" loading="lazy"></a>
-      </div>
-      <div class="slide fade"><a href="spotify.html">
-        <img src="images/karol.png" alt="Music Project" class="slide-image" loading="lazy"></a>
-      </div>
-      <div class="slide fade"><a href="spotify.html">
-        <img src="images/blxckie.png" alt="Music Discovery Project" class="slide-image" loading="lazy"></a>
-      </div>
-      <div class="slide fade"><a href="resume.html">
-        <img src="images/ai.png" alt="AI Resume Builder Project" class="slide-image" loading="lazy"></a>
-      </div>
-      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-      <a class="next" onclick="changeSlide(1)">&#10095;</a>
-    </div>
-    <div class="indicator-container">
-      <span class="indicator" onclick="currentSlide(0)"></span>
-      <span class="indicator" onclick="currentSlide(1)"></span>
-      <span class="indicator" onclick="currentSlide(2)"></span>
-      <span class="indicator" onclick="currentSlide(3)"></span>
-      <span class="indicator" onclick="currentSlide(4)"></span>
-    </div>
-  </section>
 
 
   <section id="experience" class="experience-section">

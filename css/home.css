@@ -344,10 +344,6 @@ ul li {
   padding: 40px 20px;
 }
 
-/* Compact Carousel Section */
-.compact-carousel-section {
-  padding: 40px 20px;
-}
 
 .content-container {
   display: flex;
@@ -589,6 +585,78 @@ ul li {
   border-radius: 8px;
   border: none;
   object-fit: contain;
+}
+
+/* Spotify Clone Carousel */
+.spotify-slideshow-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.spotify-slide {
+  display: none;
+  width: 100%;
+}
+
+.spotify-slide.active {
+  display: block;
+}
+
+.spotify-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.spotify-prev, .spotify-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  user-select: none;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.spotify-prev {
+  left: 10px;
+}
+
+.spotify-next {
+  right: 10px;
+}
+
+.spotify-prev:hover, .spotify-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.spotify-indicator-container {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.spotify-indicator {
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 0 4px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.spotify-indicator.active,
+.spotify-indicator:hover {
+  background-color: #000000;
 }
 
 /* Experience Section */
