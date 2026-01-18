@@ -42,7 +42,7 @@ function showSpotifySlide(n) {
 
 // Auto-advance Spotify carousel
 setInterval(() => { 
-  if (document.getElementsByClassName("spotify-slide").length > 0) {
+  if (document.getElementsByClassName("spotify-slide-link").length > 0) {
     changeSpotifySlide(1); 
   }
 }, 4000);
