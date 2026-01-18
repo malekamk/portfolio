@@ -43,17 +43,10 @@
       <li><a href="#education" class="nav-link">Education</a></li>
       <li><a href="#hackathon" class="nav-link">Achievements</a></li>
     </ul>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
-      <span class="theme-icon">🌙</span>
-    </button>
   </div>
 </nav>
 
 <header>
-  <video autoplay loop muted playsinline class="header-video">
-    <source src="images/header.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
   <a href="#about">
     <img src="images/me.jpeg" alt="Kganya Maleka Profile Picture">
   </a>
@@ -397,28 +390,6 @@
   }
 
   window.addEventListener('scroll', highlightNav);
-
-  // Dark/Light Mode Toggle
-  const themeToggle = document.getElementById('themeToggle');
-  const themeIcon = themeToggle.querySelector('.theme-icon');
-  const currentTheme = localStorage.getItem('theme') || 'dark';
-
-  // Set initial theme
-  document.documentElement.setAttribute('data-theme', currentTheme);
-  updateThemeIcon(currentTheme);
-
-  themeToggle.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateThemeIcon(newTheme);
-  });
-
-  function updateThemeIcon(theme) {
-    themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
-  }
 
   // Verify download links
   function verifyLinks() {
