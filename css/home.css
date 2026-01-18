@@ -504,6 +504,24 @@ ul li {
   flex-wrap: wrap;
 }
 
+.project-preview {
+  width: 100%;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.app-screenshots {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+.sabooks-project {
+  padding-bottom: 40px;
+}
+
 /* Experience Section */
 .experience-section {
   padding: 40px 20px;
@@ -537,14 +555,10 @@ ul li {
 }
 
 .company-logo {
-  width: 60px;
-  height: 60px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   border-radius: 8px;
-}
-
-.logo-placeholder {
-  font-size: 2rem;
 }
 
 .experience-content h3 {
