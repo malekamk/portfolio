@@ -656,6 +656,23 @@ ul li {
   white-space: nowrap;
 }
 
+/* Mobile adjustments for store buttons */
+@media (max-width: 767px) {
+  .sabooks-overlay {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .store-button {
+    width: 100%;
+    max-width: 200px;
+    justify-content: center;
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+}
+
 /* Spotify Clone Carousel */
 .spotify-slideshow-container {
   position: relative;
