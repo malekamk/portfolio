@@ -895,9 +895,6 @@ footer p {
 
 /* Desktop Styles */
 @media (min-width: 1024px) {
-  .quick-wins-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
   .header-video {
     display: block;
     position: fixed;
