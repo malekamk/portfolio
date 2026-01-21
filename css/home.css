@@ -582,13 +582,14 @@ ul li {
 }
 
 .mk-qr-img {
-  width: 84px;
-  height: 84px;
+  width: 160px;
+  height: 160px;
   flex-shrink: 0;
   border-radius: 8px;
   border: 1px solid #e5e5e5;
   background: #ffffff;
-  padding: 6px;
+  padding: 4px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 .mk-qr-text {
@@ -1265,6 +1266,17 @@ footer p {
   .project-card p {
     font-size: 0.9rem;
     margin-bottom: 12px;
+  }
+
+  .mk-qr {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mk-qr-img {
+    width: 200px;
+    height: 200px;
+    padding: 4px;
   }
 
   .project-link {
