@@ -574,6 +574,30 @@ ul li {
   margin-top: 0;
 }
 
+.mk-qr {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.mk-qr-img {
+  width: 84px;
+  height: 84px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  background: #ffffff;
+  padding: 6px;
+}
+
+.mk-qr-text {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #666666;
+}
+
 .project-link {
   display: inline-block;
   color: #000000;
