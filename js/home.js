@@ -133,6 +133,52 @@ document.addEventListener('DOMContentLoaded', function() {
 
   window.addEventListener('scroll', highlightNavLink);
   highlightNavLink();
+
+  // MK Music maintenance popover (scoped to MK Music card only)
+  const mkMaintenanceRoot = document.querySelector('[data-maintenance-target="mk-music"]');
+  const mkOpenBtn = mkMaintenanceRoot ? mkMaintenanceRoot.querySelector('[data-maintenance-open="mk-music"]') : null;
+  const mkCloseBtn = mkMaintenanceRoot ? mkMaintenanceRoot.querySelector('[data-maintenance-close="mk-music"]') : null;
+  const mkPopover = document.getElementById('mkMusicMaintenance');
+
+  function closeMkPopover() {
+    if (!mkPopover) return;
+    mkPopover.hidden = true;
+  }
+
+  function openMkPopover() {
+    if (!mkPopover) return;
+    mkPopover.hidden = false;
+    if (mkCloseBtn) mkCloseBtn.focus();
+  }
+
+  if (mkOpenBtn && mkPopover) {
+    mkOpenBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      mkPopover.hidden ? openMkPopover() : closeMkPopover();
+    });
+  }
+
+  if (mkCloseBtn && mkPopover) {
+    mkCloseBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeMkPopover();
+      if (mkOpenBtn) mkOpenBtn.focus();
+    });
+  }
+
+  document.addEventListener('click', (e) => {
+    if (!mkPopover || mkPopover.hidden) return;
+    if (!mkMaintenanceRoot) return;
+    const clickedInside = mkMaintenanceRoot.contains(e.target);
+    if (!clickedInside) closeMkPopover();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mkPopover && !mkPopover.hidden) {
+      closeMkPopover();
+      if (mkOpenBtn) mkOpenBtn.focus();
+    }
+  });
 });
 
 // Prevent body scroll when mobile menu is open

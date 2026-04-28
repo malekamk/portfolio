@@ -127,9 +127,32 @@
           <div class="project-info">
             <h3>MK Music</h3>
             <p>Music app powered by Spotify APIs, with a backend served via a Docker container running Spring Boot.</p>
-            <div class="mk-qr">
-              <img src="eas-update.svg" alt="MK Music QR Code (Expo Go)" class="mk-qr-img" loading="lazy">
-              <p class="mk-qr-text">Download Expo Go, then scan and you will see the app live.</p>
+            <div class="mk-qr mk-qr--maintenance" data-maintenance-target="mk-music">
+              <div class="mk-qr-media">
+                <img src="eas-update.svg" alt="MK Music QR Code (Expo Go)" class="mk-qr-img mk-qr-img--dim" loading="lazy">
+                <span class="maintenance-badge" aria-label="Under maintenance">Under maintenance</span>
+              </div>
+              <div class="mk-qr-copy">
+                <p class="mk-qr-text">
+                  The live demo is temporarily unavailable while we update the integration for recent Spotify platform changes.
+                </p>
+                <button type="button" class="maintenance-link" data-maintenance-open="mk-music">
+                  View maintenance details
+                </button>
+                <div class="mk-maintenance-popover" id="mkMusicMaintenance" role="dialog" aria-label="MK Music maintenance notice" hidden>
+                  <div class="mk-maintenance-popover__header">
+                    <strong>Under maintenance</strong>
+                    <button type="button" class="mk-maintenance-popover__close" data-maintenance-close="mk-music" aria-label="Close">×</button>
+                  </div>
+                  <p class="mk-maintenance-popover__text">
+                    This project depends on Spotify APIs. Recent Spotify platform updates require changes on our side, so the live demo is
+                    temporarily unavailable.
+                  </p>
+                  <p class="mk-maintenance-popover__muted">
+                    We’re actively working on a fix.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
